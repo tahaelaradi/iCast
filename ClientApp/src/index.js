@@ -1,17 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
+import "assets/vendor/nucleo/css/nucleo.css";
+import "assets/vendor/font-awesome/css/font-awesome.min.css";
+import "assets/scss/argon-design-system-react.scss";
+
+import Index from "views/Index.jsx";
 
 ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact render={props => <Index {...props} />} />
+    </Switch>
   </BrowserRouter>,
-  rootElement);
-
-registerServiceWorker();
+  document.getElementById("root")
+);
