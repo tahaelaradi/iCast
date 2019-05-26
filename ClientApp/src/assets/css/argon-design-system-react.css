@@ -10003,14 +10003,14 @@ textarea[resize="horizontal"] {
 
 .section-lg {
   padding-top: 6rem;
-  padding-bottom: 6rem; }
+  padding-bottom: 2rem; }
 
 .section-sm {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
 @media (min-width: 768px) {
-  .section-hero {
+  .section-header {
     min-height: 500px; } }
 
 .section-shaped {

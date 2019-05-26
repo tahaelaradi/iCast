@@ -3,6 +3,9 @@ import React, { Component, Fragment } from "react";
 // reactstrap components
 import { Container, Row } from "reactstrap";
 
+// index page sections
+import Header from "./sections/Header.jsx";
+
 class Index extends Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -13,6 +16,7 @@ class Index extends Component {
     return (
       <Fragment>
         <main ref="main">
+          <Header />
         </main>
       </ Fragment>
     );
