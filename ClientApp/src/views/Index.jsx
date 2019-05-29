@@ -9,6 +9,7 @@ import Footer from "components/Footers/Footer.jsx";
 
 // index page sections
 import Header from "./sections/Header.jsx";
+import Body from "./sections/Body.jsx"
 
 class Index extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ class Index extends Component {
         <MainNavbar />
         <main ref="main">
           <Header />
+          <Body />
         </main>
         <Footer />
       </ Fragment>
