@@ -60,7 +60,7 @@ class MainNavbar extends Component {
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <NavItem className="d-none d-lg-block ml-lg-4">
-                    <NavLink href="/podcasts">
+                    <NavLink href="/podcasts/explore">
                       <span className="nav-link-inner--text">Explore</span>
                     </NavLink>
                   </NavItem>
