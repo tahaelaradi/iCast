@@ -8,7 +8,7 @@ import MainNavbar from "components/Navbars/MainNavbar.jsx";
 import Footer from "components/Footers/Footer.jsx";
 
 // index page sections
-import Header from "../sections/Header.jsx";
+import SimpleHeader from "../sections/SimpleHeader.jsx";
 
 import Line from "components/Grids/Line.jsx";
 
@@ -69,32 +69,34 @@ class Podcast extends Component {
       <Fragment>
         <MainNavbar />
         <main ref="main">
-          <Header />
-          <section className="section section-components pb-0">
+          <SimpleHeader />
+          <section>
+            <Row className="pt-5 pb-2 px-6 bg-secondary">
+              <Col sm="3">
+                <img src={imgsrc} width="100%" />
+                <h6 className="text-center my-2">
+                  {this.state.podcast.subscribers} Subscribers
+                </h6>
+              </Col>
+              <Col sm="9">
+                <h2 className="display-3 text-uppercase">
+                  {this.state.podcast.title}
+                </h2>
+                <h4 className="my-2">{this.state.podcast.author}</h4>
+                <p>{this.state.podcast.description}</p>
+                <div className="my-2">
+                  <Button className="shadow-none ">Share</Button>
+                  <Button className="shadow-none ">Subscribe</Button>
+                </div>
+              </Col>
+            </Row>
             <Container>
               <Row>
-                <Col sm="3">
-                  <img src={imgsrc} width="100%" />
-                  <h6 className="text-center my-2">
-                    {this.state.podcast.subscribers} Subscribers
-                  </h6>
-                </Col>
-                <Col sm="9">
-                  <h2 className="display-3 text-uppercase">
-                    {this.state.podcast.title}
-                  </h2>
-                  <h4 className="my-2">{this.state.podcast.author}</h4>
-                  <p>{this.state.podcast.description}</p>
-                  <div className="my-2">
-                    <Button className="shadow-none ">Share</Button>
-                    <Button className="shadow-none ">Subscribe</Button>
-                  </div>
-                  <div className="border-top">
-                    <h4 className="text-success font-weight-bold mt-4">
-                      Episodes
-                    </h4>
-                    <Line episodes={this.state.episodes} />
-                  </div>
+                <Col sm="">
+                  <h4 className="text-success font-weight-bold mt-4">
+                    Episodes
+                  </h4>
+                  <Line episodes={this.state.episodes} />
                 </Col>
               </Row>
             </Container>

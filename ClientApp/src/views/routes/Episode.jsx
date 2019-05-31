@@ -8,7 +8,7 @@ import MainNavbar from "components/Navbars/MainNavbar.jsx";
 import Footer from "components/Footers/Footer.jsx";
 
 // index page sections
-import Header from "../sections/Header.jsx";
+import SimpleHeader from "../sections/SimpleHeader.jsx";
 
 class Episode extends Component {
   constructor() {
@@ -45,8 +45,8 @@ class Episode extends Component {
       <Fragment>
         <MainNavbar />
         <main ref="main">
-          <Header />
-          <section className="section section-components pb-0">
+          <SimpleHeader />
+          <section className="section section-components py-5">
             <Container>
               <Row>
                 <Col sm="3">

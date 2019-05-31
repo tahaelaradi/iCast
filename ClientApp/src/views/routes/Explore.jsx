@@ -12,7 +12,7 @@ import Pagination from "components/Pagination/PaginationBar.jsx";
 import Grid from "components/Grids/Grid.jsx";
 
 // index page sections
-import Header from "../sections/Header.jsx";
+import SimpleHeader from "../sections/SimpleHeader.jsx";
 
 class Explore extends Component {
   constructor() {
@@ -48,11 +48,11 @@ class Explore extends Component {
       <Fragment>
         <MainNavbar />
         <main ref="main">
-          <Header />
+          <SimpleHeader />
           <section className="section section-components pb-0">
             <Container>
               <Row>
-                <h2 className="display-3 my-4">Explore</h2>
+                <h2 className="display-3 my-2">Explore</h2>
               </Row>
               <Grid className="m-0" podcasts={this.state.pageOfItems} />
               <Pagination
