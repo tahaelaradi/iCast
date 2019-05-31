@@ -1,40 +1,27 @@
 import React, { Component } from "react";
 
-import PodcastCard from "components/PodcastCard/PodcastCard.jsx";
+import PodcastCard from "components/Cards/PodcastCard.jsx";
 
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Badge
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 const GridSize = 2;
 
 class Grid extends Component {
   render() {
-    var podcasts = this.props.podcasts.chunk(GridSize).map(row => {
+    var podcasts = this.props.podcasts.chunk(GridSize).map((row, index) => {
       var extraSpace = [];
-      if (row.length != GridSize) {
+      if (row.length !== GridSize) {
         for (let i = 0; i < GridSize - row.length; i++) {
           extraSpace.push(<Col className="p-0" />);
         }
       }
-      console.log(extraSpace);
 
       return (
-        <Row>
+        <Row key={index}>
           {row.map((item, index) => {
             return (
               <Col className="p-0">
-                <PodcastCard item={item} />
+                <PodcastCard key={index} item={item} />
               </Col>
             );
           })}

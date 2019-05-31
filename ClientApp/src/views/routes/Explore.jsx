@@ -20,6 +20,7 @@ class Explore extends Component {
 
     var exampleItems = [...Array(150).keys()].map(i => ({
       id: i + 1,
+      url: "podcast-" + i,
       title: "Podcast " + (i + 1),
       author: "Author" + (i + 100),
       description:

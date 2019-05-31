@@ -28,7 +28,7 @@ class PaginationBar extends Component {
           <CardTitle className="text-uppercase p-2 mb-2" >
             <a
               className="shadow-none text-center"
-              href={"player/" + this.props.item.id}
+              href={"podcast/" + this.props.item.url}
             >
             {this.props.item.title}
             </a>
