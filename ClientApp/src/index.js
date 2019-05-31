@@ -9,13 +9,14 @@ import "assets/css/argon-design-system-react.css";
 import Index from "views/Index.jsx";
 import Explore from "views/routes/Explore.jsx";
 import Podcast from "views/routes/Podcast.jsx";
-
+import Episode from "views/routes/Episode.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact render={props => <Index {...props} />} />
       <Route path="/podcasts/explore" exact render={props => <Explore {...props} />} />
+      <Route path="/podcasts/:podcast/:episode/" render={props => <Episode {...props} />} />
       <Route path="/podcasts/:podcast" render={props => <Podcast {...props} />} />
       <Redirect to="/" />
     </Switch>
