@@ -40,7 +40,7 @@ class PaginationBar extends Component {
 
     getPager(totalItems, currentPage, pageSize) {
         currentPage = currentPage || 1;
-        pageSize = pageSize || 12;
+        pageSize = pageSize || 8;
 
         var totalPages = Math.ceil(totalItems / pageSize);
         var startPage, endPage;
@@ -86,7 +86,7 @@ class PaginationBar extends Component {
         }
 
         return (
-            <Pagination className="pagination justify-content-center" listClassName="justify-content-center">
+            <Pagination className="pagination justify-content-center my-4" listClassName="justify-content-center">
               <PaginationItem className={pager.currentPage === 1 ? 'disabled' : ''}>
                 <PaginationLink onClick={() => this.setPage(1)}><i className="fa fa-angle-double-left" /></PaginationLink>
               </PaginationItem>
