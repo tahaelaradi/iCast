@@ -7,11 +7,11 @@ namespace iCast.GraphQL.GraphQLQueries
 {
     public class AppQuery : ObjectGraphType
     {
-        public AppQuery(IAuthorService service)
+        public AppQuery(IAuthorService authorService, IPodcastService podcastService)
         {
             Field<ListGraphType<AuthorType>>(
                 "authors",
-                resolve: context => service.GetAll()
+                resolve: context => authorService.GetAll()
             );
 
             Field<AuthorType>(
@@ -21,8 +21,13 @@ namespace iCast.GraphQL.GraphQLQueries
                 ),
                 resolve: context => {
                   var id = context.GetArgument<int>("id");
-                  return service.GetAuthorById(id);
+                  return authorService.GetAuthorById(id);
                 }
+            );
+
+            Field<ListGraphType<PodcastType>>(
+                "podcasts",
+                resolve: context => podcastService.GetAll()
             );
         }
     }
