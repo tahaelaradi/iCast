@@ -13,7 +13,7 @@ namespace iCast.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Podcast> Podcasts { get; set; }
         public DbSet<Episode> Episodes { get; set; }
-
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +21,7 @@ namespace iCast.Data
             modelBuilder.Entity<Author>().ToTable("Author");
             modelBuilder.Entity<Podcast>().ToTable("Podcast");
             modelBuilder.Entity<Episode>().ToTable("Episode");
+            modelBuilder.Entity<User>().ToTable("User");
 
             // use the Fluent API to configure a single property to be the key of an entity
             modelBuilder.Entity<Podcast>().HasKey(p => new { p.Id });
