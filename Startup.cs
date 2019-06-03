@@ -40,6 +40,7 @@ namespace iCast
 
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IPodcastService, PodcastService>();
+            services.AddScoped<IEpisodeService, EpisodeService>();
 
             services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
             services.AddScoped<AppSchema>();
