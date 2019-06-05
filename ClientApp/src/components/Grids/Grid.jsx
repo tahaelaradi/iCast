@@ -21,7 +21,7 @@ class Grid extends Component {
           {row.map((item, index) => {
             return (
               <Col className="p-0">
-                <PodcastCard key={index} item={item} />
+                <PodcastCard key={index} podcast={item} />
               </Col>
             );
           })}

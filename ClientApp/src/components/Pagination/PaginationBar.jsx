@@ -40,7 +40,7 @@ class PaginationBar extends Component {
 
     getPager(totalItems, currentPage, pageSize) {
         currentPage = currentPage || 1;
-        pageSize = pageSize || 8;
+        pageSize = pageSize || 4;
 
         var totalPages = Math.ceil(totalItems / pageSize);
         var startPage, endPage;
